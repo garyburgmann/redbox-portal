@@ -164,9 +164,10 @@
   dependencies:
     "@types/sizzle" "*"
 
-"@types/leaflet-draw@^0.4.11":
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/@types/leaflet-draw/-/leaflet-draw-0.4.13.tgz#479d4a5909d3c7be600953d4ab26ba79a5427574"
+"@types/leaflet-draw@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/leaflet-draw/-/leaflet-draw-1.0.2.tgz#57c6749bf9ee265a544b410fb0f7ef644a1f9d69"
+  integrity sha512-rHlpibY3yXJ1g/ArFMR++y3HvTh5s58KwpsNKSxQT49e64ODzLPesTLhkbFF8Fhs3CbHm0qfeEIcw0oFRMP43w==
   dependencies:
     "@types/leaflet" "*"
 
