@@ -1,0 +1,236 @@
+{
+  "title": "Create Record",
+  "description": "",
+  "permalink": "t~create~record~post~default~rdmp~api~records~metadata~recordtype",
+  "uuid": "58eaf1aa-a4ab-48a3-be7e-35a5976a6bf2",
+  "method": "POST",
+  "path": "/default/rdmp/api/records/metadata/{recordType}",
+  "pathTemplate": "/default/rdmp/api/records/metadata/{recordType}",
+  "parameters": [
+    {
+      "location": "path",
+      "name": "recordType",
+      "description": "The type of record to create",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "meta": {
+    "resource": {
+      "title": "Create Record",
+      "permalink": "r~create~record"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "Create Record setting metadata, authorization and workflowStage",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"authorization\": {\n\"edit\": [\"username\"],\n\"view\": [\"username\"],\n\"editPending\":[\"anEmail@redboxresearchdata.com.au\"],\n\"viewPending\":[\"anEmail@redboxresearchdata.com.au\"]\n},\n\"metadata\":{\n\"title\": \"A sample title\",\n\"description\": \"A description\"\n},\n\"workflowStage\": \"draft\"\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "201",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Location",
+            "example": "/default/rdmp/api/records/metadata/a2985faeabb6d92b56af665ca466a965",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"code\": \"201\",\n\"oid\": \"a2985faeabb6d92b56af665ca466a965\"\n}\n"
+      }
+    },
+    {
+      "request": {
+        "title": "Create Record only setting metadata",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"title\": \"A sample title\",\n\"description\": \"A description\"\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "201",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Location",
+            "example": "/default/rdmp/api/records/metadata/a2985faeabb6d92b56af665ca466a965",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"code\": \"201\",\n\"oid\": \"a2985faeabb6d92b56af665ca466a965\"\n}\n"
+      }
+    },
+    {
+      "request": {
+        "title": "Create Record setting metadata and workflowStage",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"metadata\":{\n\"title\": \"A sample title\",\n\"description\": \"A description\"\n},\n\"workflowStage\": \"draft\"\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "201",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Location",
+            "example": "/default/rdmp/api/records/metadata/a2985faeabb6d92b56af665ca466a965",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"code\": \"201\",\n\"oid\": \"a2985faeabb6d92b56af665ca466a965\"\n}\n"
+      }
+    },
+    {
+      "request": {
+        "title": "Create Record setting metadata and authorization",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"authorization\": {\n\"edit\": [\"username\"],\n\"view\": [\"username\"],\n\"editPending\":[\"anEmail@redboxresearchdata.com.au\"],\n\"viewPending\":[\"anEmail@redboxresearchdata.com.au\"]\n},\n\"metadata\":{\n\"title\": \"A sample title\",\n\"description\": \"A description\"\n}\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "201",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Location",
+            "example": "/default/rdmp/api/records/metadata/a2985faeabb6d92b56af665ca466a965",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"code\": \"201\",\n\"oid\": \"a2985faeabb6d92b56af665ca466a965\"\n}\n"
+      }
+    }
+  ]
+}

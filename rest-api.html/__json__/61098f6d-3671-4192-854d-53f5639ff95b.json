@@ -1,0 +1,142 @@
+{
+  "title": "Remove users view access to record",
+  "description": "",
+  "permalink": "t~remove~users~view~access~to~record~delete~default~rdmp~api~records~permissions~view~id",
+  "uuid": "61098f6d-3671-4192-854d-53f5639ff95b",
+  "method": "DELETE",
+  "path": "/default/rdmp/api/records/permissions/view/{id}",
+  "pathTemplate": "/default/rdmp/api/records/permissions/view/{id}",
+  "parameters": [
+    {
+      "location": "path",
+      "name": "id",
+      "description": "The id of the record to update",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "meta": {
+    "resource": {
+      "title": "Remove users view access to record",
+      "permalink": "r~remove~users~view~access~to~record"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "Remove users view access to record",
+        "description": "",
+        "method": "DELETE",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"users\": [\"username2\"]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username2\"\n],\n\"edit\": [\n  \"username1\"\n],\n\"viewPending\": [\"pendingusername2@email.com\"\n],\n\"editPending\": []\n}\n\n"
+      }
+    },
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"usersPending\": [\"pendingusername2@email.com\"]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username2\"\n],\n\"edit\": [\n  \"username1\"\n],\n\"viewPending\": [\"pendingusername2@email.com\"\n],\n\"editPending\": []\n}\n\n"
+      }
+    },
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"users\": [\"username2\"],\n\"usersPending\": [\"pendingusername2@email.com\"]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username2\"\n],\n\"edit\": [\n  \"username1\"\n],\n\"viewPending\": [\"pendingusername2@email.com\"\n],\n\"editPending\": []\n}\n\n"
+      }
+    }
+  ]
+}

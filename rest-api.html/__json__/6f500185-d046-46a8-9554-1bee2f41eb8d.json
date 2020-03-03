@@ -1,0 +1,53 @@
+{
+  "title": "Get access permissions for record",
+  "description": "",
+  "permalink": "t~get~access~permissions~for~record~get~default~rdmp~api~records~permissions~id",
+  "uuid": "6f500185-d046-46a8-9554-1bee2f41eb8d",
+  "method": "GET",
+  "path": "/default/rdmp/api/records/permissions/{id}",
+  "pathTemplate": "/default/rdmp/api/records/permissions/{id}",
+  "parameters": [
+    {
+      "location": "path",
+      "name": "id",
+      "description": "The id of the record to update",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "meta": {
+    "resource": {
+      "title": "Get access permissions for record",
+      "permalink": "r~get~access~permissions~for~record"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "GET",
+        "headers": []
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username1\"\n],\n\"edit\": [\n  \"username1\",\n  \"username2\"\n],\n\"viewPending\": [\n],\n\"editPending\": [\"pendingusername1@email.com\",\"pendingusername2@email.com\"]\n}\n\n"
+      }
+    }
+  ]
+}

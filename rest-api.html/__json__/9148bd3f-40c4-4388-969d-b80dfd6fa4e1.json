@@ -1,0 +1,141 @@
+{
+  "title": "Give users edit access to record",
+  "description": "",
+  "permalink": "t~give~users~edit~access~to~record~post~default~rdmp~api~records~permissions~edit~id",
+  "uuid": "9148bd3f-40c4-4388-969d-b80dfd6fa4e1",
+  "method": "POST",
+  "path": "/default/rdmp/api/records/permissions/edit/{id}",
+  "pathTemplate": "/default/rdmp/api/records/permissions/edit/{id}",
+  "parameters": [
+    {
+      "location": "path",
+      "name": "id",
+      "description": "The id of the record to update",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "meta": {
+    "resource": {
+      "title": "Give users edit access to record",
+      "permalink": "r~give~users~edit~access~to~record"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "Give users edit access to record",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"users\": [\"username1\",\"username2\"]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username1\"\n],\n\"edit\": [\n  \"username1\",\n  \"username2\"\n],\n\"viewPending\": [\n],\n\"editPending\": [\"pendingusername1@email.com\",\"pendingusername2@email.com\"]\n}\n\n"
+      }
+    },
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"usersPending\": [\"pendingusername1@email.com\",\"pendingusername2@email.com\"]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username1\"\n],\n\"edit\": [\n  \"username1\",\n  \"username2\"\n],\n\"viewPending\": [\n],\n\"editPending\": [\"pendingusername1@email.com\",\"pendingusername2@email.com\"]\n}\n\n"
+      }
+    },
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"viewRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"editRoles\": [\n  \"Admin\",\n  \"Librarians\"\n],\n\"view\": [\n  \"username1\"\n],\n\"edit\": [\n  \"username1\",\n  \"username2\"\n],\n\"viewPending\": [\n],\n\"editPending\": [\"pendingusername1@email.com\",\"pendingusername2@email.com\"]\n}\n\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Send an email",
+  "description": "",
+  "permalink": "t~send~an~email~post~default~rdmp~api~email",
+  "uuid": "1313dfe1-c115-40f3-a520-8a23e8c7a2b2",
+  "method": "POST",
+  "path": "/default/rdmp/api/email",
+  "pathTemplate": "/default/rdmp/api/email",
+  "parameters": [],
+  "meta": {
+    "resource": {
+      "title": "Send an email",
+      "permalink": "r~send~an~email"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"to\": [\"user@redboxresearchdata.com.au\"],\n\"subject\":\"A sample subject\",\n\"template\": \"emailTemplateName\",\n\"data\": {\"property\": \"values to populate in template\"}\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "headers": []
+      }
+    }
+  ]
+}

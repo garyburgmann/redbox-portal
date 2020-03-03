@@ -1,0 +1,72 @@
+{
+  "title": "Update Record Metadata",
+  "description": "",
+  "permalink": "t~update~record~metadata~put~default~rdmp~api~records~metadata~id",
+  "uuid": "437e724b-85af-4e9a-b28b-e7b2486dd4e2",
+  "method": "PUT",
+  "path": "/default/rdmp/api/records/metadata/{id}",
+  "pathTemplate": "/default/rdmp/api/records/metadata/{id}",
+  "parameters": [
+    {
+      "location": "path",
+      "name": "id",
+      "description": "The id of the record to update",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "meta": {
+    "resource": {
+      "title": "Update Record Metadata",
+      "permalink": "r~update~record~metadata"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "Update record metadata",
+        "description": "",
+        "method": "PUT",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "example": "Bearer abcabcab-abca-abca-abca-abcabcabcabc",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"title\": \"A sample title\",\n\"description\": \"A description\"\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n\"code\": \"200\",\n\"oid\": \"a2985faeabb6d92b56af665ca466a965\"\n}\n\n"
+      }
+    }
+  ]
+}
